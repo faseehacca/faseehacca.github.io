@@ -111,6 +111,4 @@ These are the materials I use to study:
 
 ## Certificates
 
-<iframe src="carousel.html" width="100%" height="500px" style="border: none; border-radius: 20px;"></iframe>
-
-
+<iframe src="/carousel.html" width="100%" height="500px" style="border: none; border-radius: 20px;"></iframe>

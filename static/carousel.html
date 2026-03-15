@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    background: #161618;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    width: 100%;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    position: relative;
+  }
+  .counter {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 13px;
+    color: #505060;
+    letter-spacing: 0.5px;
+  }
+  .counter span {
+    color: #c0c0d0;
+    font-weight: 700;
+  }
+  .track-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .track {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 60px;
+  }
+  .item {
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.4;
+    transform: scale(0.82);
+    width: 150px;
+    cursor: pointer;
+    background: #1a1a1f;
+  }
+  .item.active {
+    opacity: 1;
+    transform: scale(1);
+    width: 270px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+  }
+  .item img {
+    width: 100%;
+    display: block;
+  }
+  .item-label {
+    padding: 10px 14px 14px;
+    background: #1a1a1f;
+  }
+  .cert-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #f0f0f0;
+    line-height: 1.5;
+  }
+  .cert-sub {
+    font-size: 10px;
+    color: #505060;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.07);
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+  }
+  .arrow:hover {
+    background: rgba(255,255,255,0.16);
+  }
+  .arrow.left { left: 12px; }
+  .arrow.right { right: 12px; }
+  .dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2a2a45;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: #9090bb;
+    width: 22px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="counter"><span id="currentNum">1</span>/4</div>
+
+  <div class="track-wrapper">
+    <button class="arrow left" id="prev">‹</button>
+    <div class="track" id="track">
+      <div class="item active" onclick="setActive(0)">
+        <img src="cert-foundation.png" />
+        <div class="item-label">
+          <div class="cert-title">Foundation Diploma</div>
+          <div class="cert-sub">ACCA Foundation</div>
+        </div>
+      </div>
+      <div class="item" onclick="setActive(1)">
+        <img src="cert-rqf2.png" />
+        <div class="item-label">
+          <div class="cert-title">Diploma in Financial & Management Accounting</div>
+          <div class="cert-sub">RQF Level 2</div>
+        </div>
+      </div>
+      <div class="item" onclick="setActive(2)">
+        <img src="cert-rqf3.png" />
+        <div class="item-label">
+          <div class="cert-title">Diploma in Financial & Management Accounting</div>
+          <div class="cert-sub">RQF Level 3</div>
+        </div>
+      </div>
+      <div class="item" onclick="setActive(3)">
+        <img src="cert-rqf4.png" />
+        <div class="item-label">
+          <div class="cert-title">Diploma in Accounting & Business</div>
+          <div class="cert-sub">RQF Level 4</div>
+        </div>
+      </div>
+    </div>
+    <button class="arrow right" id="next">›</button>
+  </div>
+
+  <div class="dots" id="dots">
+    <div class="dot active" onclick="setActive(0)"></div>
+    <div class="dot" onclick="setActive(1)"></div>
+    <div class="dot" onclick="setActive(2)"></div>
+    <div class="dot" onclick="setActive(3)"></div>
+  </div>
+</div>
+
+<script>
+  let current = 0;
+  const items = document.querySelectorAll('.item');
+  const dots = document.querySelectorAll('.dot');
+  const counter = document.getElementById('currentNum');
+
+  function setActive(index) {
+    items[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    items[current].classList.add('active');
+    dots[current].classList.add('active');
+    counter.textContent = current + 1;
+  }
+
+  document.getElementById('prev').onclick = function() {
+    setActive(current - 1 < 0 ? items.length - 1 : current - 1);
+  };
+
+  document.getElementById('next').onclick = function() {
+    setActive(current + 1 >= items.length ? 0 : current + 1);
+  };
+</script>
+</body>
+</html>
