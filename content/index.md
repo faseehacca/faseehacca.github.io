@@ -13,8 +13,9 @@ I'm a 21 year old ACCA student based in Lahore, Pakistan. I'm on a journey to un
 I believe that learning never really stops. Every book, every concept, every small habit compounds over time into something meaningful. This site is my attempt to document that compounding — the ideas I'm exploring, the progress I'm making, and the person I'm slowly becoming.
 
 Here you'll find:
-- My [[ACCA Progress]] journey
-- [[Books]] I'm reading and thinking about
+- My ACCA journey
+- [[Projects]] I've made as portfolio
+- [[Books]] I'm reading
 - Reflections on learning and [[self-improvement]]
 - [[Habits]] I'm building along the way
 
