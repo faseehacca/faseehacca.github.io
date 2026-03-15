@@ -1,0 +1,7 @@
+<svg width="100%" viewBox="0 0 680 120" xmlns="http://www.w3.org/2000/svg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+.sig { font-family: 'Homemade Apple', cursive; font-size: 38px; fill: currentColor; }
+</style>
+<text x="60" y="80" class="sig">— Faseeh :)</text>
+</svg>
