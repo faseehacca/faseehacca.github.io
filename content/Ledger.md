@@ -65,7 +65,7 @@ These are the materials I use to study for FR:
 
 ---
 ## Tools
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 1rem;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 1rem;">
 
   <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
     <img src="word.png" style="width: 40px; height: 40px; border-radius: 8px;" />
