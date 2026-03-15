@@ -60,7 +60,7 @@ Financial Reporting is my first Skills level exam. It's a significant step up fr
 - Current issues in financial reporting
 
 ---
-## Study Resources
+## Study Resource
 
 These are the materials I use to study:
 
