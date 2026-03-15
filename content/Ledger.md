@@ -1,7 +1,6 @@
 ---
 title: Ledger
 ---
-
 *A living record of my progress, skills, and tools.*
 
 ---
@@ -13,11 +12,11 @@ title: Ledger
   <div style="font-size: 52px; font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 1.2rem;">41%</div>
   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 1.4rem;">
     <div>
-      <div style="background: linear-gradient(90deg, #d4622a, #f5c97a); border-radius: 999px; height: 14px;"></div>
+      <div style="background: linear-gradient(90deg, #1a6b9a, #4fb3d4); border-radius: 999px; height: 14px;"></div>
     </div>
     <div>
       <div style="background: #2a2a35; border-radius: 999px; height: 14px; overflow: hidden;">
-        <div style="background: linear-gradient(90deg, #e8924e, #f5c97a); border-radius: 999px; height: 14px; width: 8%;"></div>
+        <div style="background: linear-gradient(90deg, #1a6b9a, #4fb3d4); border-radius: 999px; height: 14px; width: 8%;"></div>
       </div>
     </div>
     <div>
@@ -26,7 +25,7 @@ title: Ledger
   </div>
   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;">
     <div>
-      <div style="font-size: 13px; font-weight: 500; color: #e8924e;">Foundation</div>
+      <div style="font-size: 13px; font-weight: 500; color: #4fb3d4;">Foundation</div>
       <div style="font-size: 11px; color: #606070; margin-top: 2px;">✅ Completed</div>
     </div>
     <div style="text-align: center;">
@@ -38,5 +37,59 @@ title: Ledger
       <div style="font-size: 11px; color: #606070; margin-top: 2px;">⏳ Upcoming</div>
     </div>
   </div>
+</div>
+
+---
+## Current Exam
+
+### FR — Financial Reporting
+*Skills Level · Deadline: June 2026*
+
+Financial Reporting is my first Skills level exam. It's a significant step up from Foundation level, covering IFRS standards, consolidated financial statements, and interpretation of accounts. Just getting started, but fully committed.
+
+**What FR covers:**
+- Preparation of financial statements under IFRS
+- Consolidated financial statements
+- Interpretation and analysis of financial statements
+- Current issues in financial reporting
+
+---
+## Study Resources
+
+These are the materials I use to study for FR:
+
+- **ACCA Study Hub** — Official ACCA learning platform
+- **Kaplan** — Study Text and Exam Kit
+- **BPP** — Exam Kit
+- **SKANS Notes** — Local study notes
+
+---
+## Tools
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 1rem;">
+
+  <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
+    <img src="word.png" style="width: 40px; height: 40px; border-radius: 8px;" />
+    <div>
+      <div style="font-size: 18px; font-weight: 900; color: #ffffff;">Microsoft Word</div>
+      <div style="font-size: 14px; color: #606070; margin-top: 2px;">Note taking</div>
+    </div>
+  </div>
+
+  <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
+    <img src="excel.png" style="width: 40px; height: 40px; border-radius: 8px;" />
+    <div>
+      <div style="font-size: 18px; font-weight: 900; color: #ffffff;">Microsoft Excel</div>
+      <div style="font-size: 14px; color: #606070; margin-top: 2px;">Numerical questions</div>
+    </div>
+  </div>
+
+  <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
+    <img src="anki.png" style="width: 40px; height: 40px; border-radius: 8px;" />
+    <div>
+      <div style="font-size: 18px; font-weight: 900; color: #ffffff;">Anki</div>
+      <div style="font-size: 14px; color: #606070; margin-top: 2px;">Flashcards & review</div>
+    </div>
+  </div>
+
 </div>
 
