@@ -1,7 +1,13 @@
 ---
-title: Ledger
+title: Qualification
 ---
-*A living record of my progress, skills, and tools.*
+*A living record of my progress, skills, and studies.*
+
+I've always been curious about how money works — not just personally, but on a professional level. How do companies operate? How do banks function? What's really going on behind the numbers, taxation and stuff?
+
+ACCA felt like the right path to answer those questions properly. Two years in, it's challenging — but that's kind of the point. The difficulty is what makes it worth it.
+
+The plan? Land a solid job first, build real experience, and eventually use everything I've learned to run something of my own.
 
 ---
 <div style="background: #1a1a1f; border-radius: 20px; padding: 1.8rem 2rem; max-width: 520px; margin: 0 auto;">
@@ -81,9 +87,9 @@ These are the materials I use to study:
 
 <div class="tool-grid">
   <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
-    <img src="word.png" style="width: 40px; height: 40px; border-radius: 8px;" />
+    <img src="obsidian.png" style="width: 40px; height: 40px; border-radius: 8px;" />
     <div>
-      <div style="font-size: 18px; font-weight: 900; color: #ffffff;">Microsoft Word</div>
+      <div style="font-size: 18px; font-weight: 900; color: #ffffff;">Obsidian</div>
       <div style="font-size: 14px; color: #606070; margin-top: 2px;">Note taking</div>
     </div>
   </div>
@@ -102,4 +108,9 @@ These are the materials I use to study:
     </div>
   </div>
 </div>
+
+## Certificates
+
+<iframe src="carousel.html" width="100%" height="500px" style="border: none; border-radius: 20px;"></iframe>
+
 
