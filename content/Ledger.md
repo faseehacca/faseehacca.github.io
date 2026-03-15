@@ -56,7 +56,7 @@ Financial Reporting is my first Skills level exam. It's a significant step up fr
 ---
 ## Study Resources
 
-These are the materials I use to study for FR:
+These are the materials I use to study:
 
 - **ACCA Study Hub** — Official ACCA learning platform
 - **Kaplan** — Study Text and Exam Kit
@@ -65,8 +65,21 @@ These are the materials I use to study for FR:
 
 ---
 ## Tools
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 1rem;">
+<style>
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+@media (max-width: 600px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
+<div class="tool-grid">
   <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
     <img src="word.png" style="width: 40px; height: 40px; border-radius: 8px;" />
     <div>
@@ -74,7 +87,6 @@ These are the materials I use to study for FR:
       <div style="font-size: 14px; color: #606070; margin-top: 2px;">Note taking</div>
     </div>
   </div>
-
   <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
     <img src="excel.png" style="width: 40px; height: 40px; border-radius: 8px;" />
     <div>
@@ -82,7 +94,6 @@ These are the materials I use to study for FR:
       <div style="font-size: 14px; color: #606070; margin-top: 2px;">Numerical questions</div>
     </div>
   </div>
-
   <div style="background: #1a1a1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 12px;">
     <img src="anki.png" style="width: 40px; height: 40px; border-radius: 8px;" />
     <div>
@@ -90,6 +101,5 @@ These are the materials I use to study for FR:
       <div style="font-size: 14px; color: #606070; margin-top: 2px;">Flashcards & review</div>
     </div>
   </div>
-
 </div>
 
