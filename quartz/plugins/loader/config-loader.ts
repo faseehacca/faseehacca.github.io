@@ -23,7 +23,7 @@ import {
   toFileUrl,
   isLocalSource,
 } from "./gitLoader"
-import { loadComponentsFromPackage } from "./componentLoader"
+import { loadComponentsFromPackage, registerLocalComponents } from "./componentLoader"
 import { loadFramesFromPackage } from "./frameLoader"
 import { componentRegistry } from "../../components/registry"
 import { getCondition } from "./conditions"
@@ -249,6 +249,8 @@ export async function loadQuartzConfig(
   configOverrides?: Partial<GlobalConfiguration>,
 ): Promise<QuartzConfig> {
   const json = readPluginsJson()
+
+  registerLocalComponents()
 
   if (!json) {
     // Fallback: import old-style config directly
@@ -847,6 +849,50 @@ export function buildLayoutForEntries(
     posArray.push({
       component,
       priority: layoutDefaults?.defaultPriority ?? 50,
+    })
+  }
+
+  // Add the homepage-only monthly calendar
+  const calendar = componentRegistry.get("MonthlyCalendar")
+  if (calendar) {
+    let component: QuartzComponent
+
+    if (typeof calendar.component === "function" && !("displayName" in calendar.component)) {
+      component = componentRegistry.instantiate(
+        calendar.component as QuartzComponentConstructor,
+        undefined,
+      )
+    } else {
+      component = calendar.component as QuartzComponent
+    }
+
+    component = applyConditionWrapper(component, "is-index")
+
+    positions.right.push({
+      component,
+      priority: 20,
+    })
+  }
+
+  // Add the homepage-only exam countdown
+  const countdown = componentRegistry.get("ExamCountdown")
+  if (countdown) {
+    let component: QuartzComponent
+
+    if (typeof countdown.component === "function" && !("displayName" in countdown.component)) {
+      component = componentRegistry.instantiate(
+        countdown.component as QuartzComponentConstructor,
+        undefined,
+      )
+    } else {
+      component = countdown.component as QuartzComponent
+    }
+
+    component = applyConditionWrapper(component, "is-index")
+
+    positions.right.push({
+      component,
+      priority: 30,
     })
   }
 

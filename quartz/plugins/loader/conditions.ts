@@ -20,6 +20,8 @@ const builtinConditions: Record<string, ConditionPredicate> = {
 
 const customConditions = new Map<string, ConditionPredicate>()
 
+customConditions.set("is-index", (props) => props.fileData.slug === "index")
+
 export function registerCondition(name: string, predicate: ConditionPredicate): void {
   customConditions.set(name, predicate)
 }
