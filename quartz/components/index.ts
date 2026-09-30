@@ -7,10 +7,11 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import MonthlyCalendar from "./MonthlyCalendar"
 import ExamCountdown from "./ExamCountdown"
+import StudyProgress from "./StudyProgress"
 
 export { componentRegistry, defineComponent } from "./registry"
 export { External } from "./external"
 export type { ComponentManifest, RegisteredComponent } from "./registry"
 export type { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-export { Head, Spacer, DesktopOnly, MobileOnly, NotFound, Flex, ConditionalRender, MonthlyCalendar, ExamCountdown }
+export { Head, Spacer, DesktopOnly, MobileOnly, NotFound, Flex, ConditionalRender, MonthlyCalendar, ExamCountdown, StudProgress }

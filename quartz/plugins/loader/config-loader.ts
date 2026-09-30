@@ -896,6 +896,31 @@ export function buildLayoutForEntries(
     })
   }
 
+// Add the homepage-only study progress
+const studyProgress = componentRegistry.get("StudyProgress")
+if (studyProgress) {
+  let component: QuartzComponent
+
+  if (
+    typeof studyProgress.component === "function" &&
+    !("displayName" in studyProgress.component)
+  ) {
+    component = componentRegistry.instantiate(
+      studyProgress.component as QuartzComponentConstructor,
+      undefined,
+    )
+  } else {
+    component = studyProgress.component as QuartzComponent
+  }
+
+  component = applyConditionWrapper(component, "is-index")
+
+  positions.afterBody.push({
+    component,
+    priority: 40,
+  })
+}
+
   // Sort by priority and resolve groups
   const result: Partial<FullPageLayout> = {}
 
