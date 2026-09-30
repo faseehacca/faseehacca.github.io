@@ -2,6 +2,7 @@ import { componentRegistry } from "../../components/registry"
 import MonthlyCalendar from "../../components/MonthlyCalendar"
 import ExamCountdown from "../../components/ExamCountdown"
 import StudyProgress from "../../components/StudyProgress"
+import StudyHeatmap from "../../components/StudyHeatmap"
 import { ComponentManifest, PluginManifest } from "./types"
 import { QuartzComponentConstructor } from "../../components/types"
 import { getPluginSubpathEntry, toFileUrl } from "./gitLoader"
@@ -10,6 +11,7 @@ export function registerLocalComponents(): void {
   componentRegistry.register("MonthlyCalendar", MonthlyCalendar, "local")
   componentRegistry.register("ExamCountdown", ExamCountdown, "local")
   componentRegistry.register("StudyProgress", StudyProgress, "local")
+  componentRegistry.register("StudyHeatmap", StudyHeatmap, "local")
 }
 
 export async function loadComponentsFromPackage(

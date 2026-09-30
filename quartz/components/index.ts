@@ -8,6 +8,7 @@ import ConditionalRender from "./ConditionalRender"
 import MonthlyCalendar from "./MonthlyCalendar"
 import ExamCountdown from "./ExamCountdown"
 import StudyProgress from "./StudyProgress"
+import StudyHeatmap from "./StudyHeatmap"
 
 export { componentRegistry, defineComponent } from "./registry"
 export { External } from "./external"

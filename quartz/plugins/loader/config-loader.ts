@@ -31,11 +31,33 @@ import Flex from "../../components/Flex"
 import MobileOnly from "../../components/MobileOnly"
 import DesktopOnly from "../../components/DesktopOnly"
 import ConditionalRender from "../../components/ConditionalRender"
+import StudyHeatmap from "../../components/StudyHeatmap"
 
 const CONFIG_YAML_PATH = path.join(process.cwd(), "quartz.config.yaml")
 const DEFAULT_CONFIG_YAML_PATH = path.join(process.cwd(), "quartz.config.default.yaml")
 const LEGACY_PLUGINS_JSON_PATH = path.join(process.cwd(), "quartz.plugins.json")
 const LEGACY_DEFAULT_PLUGINS_JSON_PATH = path.join(process.cwd(), "quartz.plugins.default.json")
+
+function readStudyTimeTracker(): { date: string; hours: number }[] {
+  const trackerPath = path.join(process.cwd(), "content", "Life Journal", "Study Time Tracker.md")
+  console.log("STUDY TRACKER:", trackerPath, fs.existsSync(trackerPath), fs.readFileSync(trackerPath, "utf-8"))
+
+  if (!fs.existsSync(trackerPath)) return []
+
+  const lines = fs.readFileSync(trackerPath, "utf-8").split(/\r?\n/)
+
+  return lines
+    .filter((line) => /^\|\s*\d{4}-\d{2}-\d{2}\s*\|/.test(line))
+    .map((line) => {
+      const cells = line.split("|").map((cell) => cell.trim())
+
+      return {
+        date: cells[1],
+        hours: Number(cells[3]),
+      }
+    })
+    .filter((entry) => entry.date && Number.isFinite(entry.hours))
+}
 
 function resolveConfigPath(): string {
   if (fs.existsSync(CONFIG_YAML_PATH)) return CONFIG_YAML_PATH
@@ -920,6 +942,31 @@ if (studyProgress) {
     priority: 40,
   })
 }
+
+  // Add the homepage-only study heatmap
+  const studyHeatmap = componentRegistry.get("StudyHeatmap")
+  if (studyHeatmap) {
+    const entries = readStudyTimeTracker()
+    console.log("STUDY ENTRIES:", entries)
+
+    const heatmapComponent = componentRegistry.instantiate(
+      studyHeatmap.component as QuartzComponentConstructor,
+      undefined,
+    )
+
+    const component = (props: any) =>
+      heatmapComponent({
+        ...props,
+        entries,
+      })
+
+    const wrappedComponent = applyConditionWrapper(component, "is-index")
+
+    positions.afterBody.push({
+      component: wrappedComponent,
+      priority: 50,
+    })
+  }
 
   // Sort by priority and resolve groups
   const result: Partial<FullPageLayout> = {}
