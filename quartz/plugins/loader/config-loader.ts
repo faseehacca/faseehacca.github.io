@@ -968,6 +968,29 @@ if (studyProgress) {
     })
   }
 
+  // Add the custom footer
+  const footer = componentRegistry.get("footer")
+  if (footer) {
+    let component: QuartzComponent
+
+    if (
+      typeof footer.component === "function" &&
+      !("displayName" in footer.component)
+    ) {
+      component = componentRegistry.instantiate(
+        footer.component as QuartzComponentConstructor,
+        undefined,
+      )
+    } else {
+      component = footer.component as QuartzComponent
+    }
+
+    positions.footer.push({
+      component,
+      priority: 50,
+    })
+  }
+
   // Sort by priority and resolve groups
   const result: Partial<FullPageLayout> = {}
 
