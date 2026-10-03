@@ -8,6 +8,6 @@ title: // epistemophile
 
 Hi, I’m Smiley — a student of finance and accounting currently pursuing the ACCA qualification. Beyond the numbers and frameworks, I have an endless curiosity about how things work, with a habit of pulling at small threads and following questions wherever they lead.
 
-My curiosity spans finance, technology, physics, psychology, history, philosophy, and different subjects. I do it out of a genuine desire to dissect concepts, test assumptions, and build a clear perspective from first principles.
+My curiosity spans a wide range of disciplines, including finance, technology, physics, psychology, history, philosophy, Islamic studies, and eschatology. I do it out of a genuine desire to dissect concepts, test assumptions, and build a clear perspective from first principles.
 
 This website is my public digital garden and working memory. Rather than a polished portfolio, it serves as an evolving record of my study notes, key takeaways from books, articles, spontaneous observations, and the occasional rabbit hole worth preserving.

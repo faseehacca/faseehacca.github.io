@@ -1,6 +1,7 @@
 **Author:** Scott H. Young
 
 ---
+
 Facilitated by online communities, many ultralearners operate anonymously, their efforts observable only by unverifiable forum postings. One such poster at Chinese-forums.com, who goes only by the username Tamu, extensively documented his process of studying Chinese from scratch. Devoting “70–80+ hours each week” over four months, he challenged himself to pass the HSK 5, China’s second highest Mandarin proficiency exam.
 
 ---
